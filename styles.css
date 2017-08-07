@@ -1,0 +1,37 @@
+img {
+  margin-left:350px;
+  margin-bottom:-25px;
+}
+h2 {
+  margin-left:380px;
+}
+h3 {
+  float: right;
+  margin-right: 220px;
+  margin-top: -84px;
+}
+.header-right > img {
+  float: right;
+  margin-right: 398px;
+  margin-top: -59px;
+}
+strong {
+  float: right;
+  margin-right: 290px;
+  margin-top: -45px;
+  font-size:20px;
+  color:#2965BE;
+}
+  span {
+    display: none;
+  }
+@media(min-width:320px) and (max-width:480px) {
+    img {
+  margin-left:0px;
+  margin-bottom:-25px;
+}
+h2 {
+  margin-left:0px;
+}
+	
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amazon web Page using Jquery</title>
+ <link rel="stylesheet" type="text/css" href="styles.css"> 
+ <script src="jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  
+  <div class="header-left">
+   <img src="logo.png" alt="Smiley face" height="42" width="100"> 
+   <h2>India's Largest Market Place</h2>
+  </div>
+  <div class="header-right">
+  <h3>Select Language English|Hindi</h3>
+ <img src="user.png" alt="Smiley face" height="42" width="42"><strong>My Account</strong>
+     
+ 
+https://api.jquery.com/focus/
+  </div>
+  
+  </div>
+</head>
+<body>
+ <p><input type="text"> <span>focus fire</span></p>
+<p><input type="password"> <span>focus fire</span></p>
+
+<script>
+$( "input" ).focus(function() {
+  $( this ).next( "span" ).css( "display", "inline" );
+});
+</script>
+</body>
+</html> 
