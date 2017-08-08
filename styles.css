@@ -22,9 +22,31 @@ strong {
   font-size:20px;
   color:#2965BE;
 }
-  span {
+ span{
     display: none;
-  }
+}
+.ca6 {
+  color: #a6a6a6;
+}
+p.ca6 small {
+  font-size: 11px;
+  font-weight: normal;
+}
+small {
+  margin-left: 90px;
+}
+.ca6 {
+  color: #a6a6a6;
+  margin-top: -16px;
+}
+input {
+  margin-left: 34px;
+  width: 450px;
+}
+.contact-form{
+  margin-left: 400px;
+  margin-top: 50px;
+}
 @media(min-width:320px) and (max-width:480px) {
     img {
   margin-left:0px;
