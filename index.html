@@ -14,7 +14,8 @@
   <h3>Select Language English|Hindi</h3>
  <img src="user.png" alt="Smiley face" height="42" width="42"><strong>My Account</strong>
      
- 
+ <span class="suggest" style="display: none;">
+                                        
 
   </div>
   
@@ -22,15 +23,81 @@
 </head>
 <body>
 <div class="contact-form">
- <p>Ad Title <input type="text"> <span>focus fire</span></p>
+ <p>Ad Title : <input type="text"> <span>Want to get your AD noticed? <br/>Give your ad an attractive title.<br/>Think of words that people would use to search for your Ad.<br/>Check the spellings and do not use CAPITAL LETTERS or symbols.</span></p>
  <p class="desc ca6">
 <small> <b id="add-title-counter" class="counter-placeholder {forId: 'add-title'}">70</b> characters left									</small>
  </p>
- <p> Category<input type="password"> <span>focus fire</span></p>
+Category :
+<select name="category" id="category">
+    <option value="Cars">Cars</option>
+    <option value="Real Estate">Real Estate</option>
+    <option value="Mobiles">Mobiles</option>
+    <option value="Electronic Appliances">Electronic Appliances</option>
+    <option value="Bikes">Bikes</option>
+
+
+    <option value="Real Estate">Real Estate</option>
+
+</select>
+<br><br> 
 </div>
+<div class="fblock clr" id="description">
+						<div class="fleft label tright">
+						Ad Description:
+						</div>
+						<div class="area clr">
+							<div class="fleft rel focusbox">
+								<textarea class="x-normal light required br4 {maxtext:4096, mintext:10}" style="height: 140px; width: 400px; resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; line-height: 16px; text-decoration: none; letter-spacing: normal;" cols="80" rows="1" placeholder="Include the brand, model, age and any included accessories." tabindex="-1"></textarea><textarea name="data[description]" class="x-normal light required br4 {maxtext:4096, mintext:10}" id="add-description" style="height: 140px; width: 400px; resize: none; overflow-y: hidden;" cols="80" rows="1" placeholder="Include the brand, model, age and any included accessories."></textarea>
+								<span class="status icon vtop inlblk dnone">&nbsp;</span>
+								<p class="desc ca6">
+									<small> <b class="counter-placeholder {forId: 'add-description'}">4096</b>
+										characters left									</small>
+								</p>
+								<div style="display: none;" class="suggest withrightbanner wide abs zi2 br3">
+                                    <span class="target abs icon">&nbsp;</span>
+									<span class="suggestTitle">Items with good description sell faster!</span>
+									<ul class="suggest newPostingtooltips" style="display: none;">
+										<li><span>Include the brand, model, age and any included accessories.</span></li>
+										<li><span>Mention the condition, features and reason for selling.</span></li>
+										<li><span>If the item is still under warranty, mention it!</span></li>
+										<li><span>Remember, a good description needs at least 2-3 sentences.</span></li>
+									</ul>
+									<ul class="suggestDefault hidden">
+										<li><span>Include the brand, model, age and any included accessories.</span></li>
+										<li><span>Mention the condition, features and reason for selling.</span></li>
+										<li><span>If the item is still under warranty, mention it!</span></li>
+										<li><span>Remember, a good description needs at least 2-3 sentences.</span></li>
+									</ul>
+									<ul class="newPostingtooltips pets-tips hide">
+										<li><span>The trade of species protected under the (Indian) Wildlife Protection Act, 1972, other regulations and conventions is prohibited on the Website. Further, trade of dead animals, animals for the purposes of slaughter, fighting, racing, torture or any other form of cruelty towards animals is also not allowed.</span></li>
+										<li><span>Please note that OLX works closely with regulators and law enforcement agencies in their investigation of illegal trade of protected species.</span></li>
+										<li><span>Please go through our posting rules and ensure that your advertisement complies with them.</span></li>
+									</ul>
+									<p style="display: none" class="error"></p>
+								</div>
+								<div class="jobSuggestEle" style="display: none">
+									<span class="target abs icon">&nbsp;</span>
+									<span class="suggestTitle">Jobs with good description consider faster!</span>
+									<ul class="suggest newPostingtooltips" style="display: none;">
+										<li><span>Job description should be with experience,skills</span></li>
+										<li><span>Add job location and other relavent information</span></li>
+									</ul>
+									<p style="display: none" class="error"></p>
+								</div>
+							</div>
+						</div>
+					</div>
 <script>
 $( "input" ).focus(function() {
-  $( this ).next( "span" ).css( "display", "inline" );
+  $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 10000 );
+});
+</script>
+<script>
+$('#category').on('change', function () {
+  var cl= '.'+this.value.replace(/ /g,'');
+  $('#subcategory optgroup').hide();
+  $(cl).show();
+  $('#subcategory').val('');
 });
 </script>
 </body>
